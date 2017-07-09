@@ -162,21 +162,13 @@
 }
 
 /* circular-graph demo */
-#demo-container {
-
-}
-
 #circular-graph {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   background-color: #FAFAFA;
-  border-color: #0c86ae;
-  border: double;
+  border: 20px solid #0c86ae;
   text-align: center;
-  -webkit-animation: rotate-loading;
-  -o-animation: rotate-loading;
-  animation: rotate-loading;
 }
 
 .circular-loading {
@@ -194,4 +186,8 @@
   font-weight: bolder;
 }
 
-
+/* canvas */
+#canvas {
+  width: 800px;
+  height: 400px;
+}
