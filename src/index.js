@@ -1,11 +1,62 @@
-import '../public/main.css';
-import '../public/index.css';
+import "../public/main.css";
+import "../public/index.css";
+import $ from "jquery";
 import MovableCoord from "@egjs/movablecoord";
 
-const el = document.querySelector('#area');
-const instance = new MovableCoord("#area", {
-	max : [300, 400]
-}).bind(el, {
-	direction : MovableCoord.DIRECTION_ALL,
-	scale: [1, 1.5]
-});
+(function() {
+
+	const plate = $("#circular-plate-section");
+
+	const inst = new MovableCoord({
+		min : [ 0, 0 ],
+		max : [ 7200, 7200 ],
+		circular: true
+	}).on({
+		"change": ({pos}) => {
+			const rotate = pos[1]/2;
+			console.log(`${rotate}`);
+			plate.css(`transform`, `rotate(${rotate}deg)`)
+			if (rotate % 360 === 0) {
+				plate.css(`transform`, `rotate(30deg)`)
+			}
+		}
+	}).bind("#circular-plate", {
+		scale: [0, .3],
+		direction: MovableCoord.DIRECTION_VERTICAL
+	});
+
+	inst.setTo(7200, 7200, 0);
+})();
+
+(function() {
+	const plate = $("#circular-graph");
+	const $num = $("#circular-graph-text__number");
+
+	const flickerCoord = new MovableCoord({
+		min: [0, 0],
+		max: [0, 100]
+	}).on({
+		"change": ({pos}) => {
+			const nextNum = Math.ceil(pos[1]);
+			console.log(`${nextNum}`);
+			if (nextNum > 100) {
+				const nextSize = nextNum - 100 + 32;
+				const nextPos = 54 + ((100 - nextNum) / 2);
+				$num.css("font-size", `${nextSize}px`);
+				$num.css("top", `${nextPos}px`);
+			} else if (nextNum < 0) {
+				const nextSize = nextNum + 32;
+				const nextPos = 54 - (nextNum / 2);
+				$num.css("font-size", `${nextSize}px`);
+				$num.css("top", `${nextPos}px`);
+			} else {
+				$num.text(nextNum);
+			}
+		}
+	}).bind("#demo-container", {
+		scale: [0, .2],
+		direction: MovableCoord.DIRECTION_VERTICAL
+	});
+
+	flickerCoord.setTo(0, 100, 0);
+})();

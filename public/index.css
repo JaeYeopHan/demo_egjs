@@ -1,3 +1,197 @@
-h1 {
-  color: blue;
+/* circular demo css*/
+#circular-plate {
+  background-color: #F5F5F5;
 }
+
+.plate {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: 5px solid #BE3D45;
+  background-color: #fff;
+  transform: rotate(0deg);
+}
+
+.plate-center {
+  margin: 0 246px;
+  height: 30px;
+  width: 12px;
+  background-color: #B9B9B9;
+  border: 0px;
+}
+
+.plate-section {
+  position: absolute;
+  left: 250px;
+  width: 1px;
+  height: 500px;
+}
+
+.plate-section-border {
+  background-color: #EBD7D7;
+  width: 3px;
+  opacity: .7;
+}
+
+.plate-section__1 {
+  transform: rotate(0deg);
+}
+
+.plate-section-text__1 {
+  transform: rotate(10deg);
+}
+
+.plate-section__2 {
+  transform: rotate(22.5deg);
+}
+
+.plate-section-text__2 {
+  transform: rotate(32.5deg);
+}
+
+.plate-section__3 {
+  transform: rotate(45deg);
+}
+
+.plate-section-text__3 {
+  transform: rotate(53deg);
+}
+
+.plate-section__4 {
+  transform: rotate(67.5deg);
+}
+
+.plate-section-text__4 {
+  transform: rotate(77.5deg);
+}
+
+.plate-section__5 {
+  transform: rotate(90deg);
+}
+
+.plate-section-text__5 {
+  transform: rotate(100deg);
+}
+
+.plate-section__6 {
+  transform: rotate(112.5deg);
+}
+
+.plate-section-text__6 {
+  transform: rotate(122.5deg);
+}
+
+.plate-section__7 {
+  transform: rotate(135deg);
+}
+
+.plate-section-text__7 {
+  transform: rotate(145deg);
+}
+
+.plate-section__8 {
+  transform: rotate(157.5deg);
+}
+
+.plate-section-text__8 {
+  transform: rotate(167.5deg);
+}
+
+.plate-section__9 {
+  transform: rotate(180deg);
+}
+
+.plate-section-text__9 {
+  transform: rotate(190deg);
+}
+
+.plate-section__10 {
+  transform: rotate(202.5deg);
+}
+
+.plate-section-text__10 {
+  transform: rotate(212.5deg);
+}
+
+.plate-section__11 {
+  transform: rotate(225deg);
+}
+
+.plate-section-text__11 {
+  transform: rotate(235deg);
+}
+
+.plate-section__12 {
+  transform: rotate(247.5deg);
+}
+
+.plate-section-text__12 {
+  transform: rotate(257.5deg);
+}
+
+.plate-section__13 {
+  transform: rotate(270deg);
+}
+
+.plate-section-text__13 {
+  transform: rotate(280deg);
+}
+
+.plate-section__14 {
+  transform: rotate(292.5deg);
+}
+
+.plate-section-text__14 {
+  transform: rotate(302.5deg);
+}
+
+.plate-section__15 {
+  transform: rotate(315deg);
+}
+
+.plate-section-text__15 {
+  transform: rotate(325deg);
+}
+
+.plate-section__16 {
+  transform: rotate(337.5deg);
+}
+
+.plate-section-text__16 {
+  transform: rotate(347.5deg);
+}
+
+/* circular-graph demo */
+#demo-container {
+
+}
+
+#circular-graph {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #FAFAFA;
+  border-color: #0c86ae;
+  border: double;
+  text-align: center;
+  -webkit-animation: rotate-loading;
+  -o-animation: rotate-loading;
+  animation: rotate-loading;
+}
+
+.circular-loading {
+  width: 20px;
+  height: 20px;
+  background-color: #0c86ae;
+  transform: rotate(0deg);
+}
+
+.circular-graph-text {
+  position: relative;
+  top: 54px;
+  color: #636D7F;
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+
